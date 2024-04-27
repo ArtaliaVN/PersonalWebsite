@@ -1,0 +1,11 @@
+{
+    "Home":         ["Home","Trang chủ"],
+    "Portfolio":    ["Portfolio", "Gì gì đó"],
+    "Achievement":  ["Achievement", "Thành tựu"],
+    "Language":     ["Language", "Ngôn ngữ"],
+    "Control":      ["Setting", "Cài đặt"],
+    "GOOD DAY":     ["GOOD DAY!", "CHÀO MỪNG!"],
+    "Intro":        ["My name is Nguyen Minh Thong (Artalia)", "Mình tên là Nguyễn Minh Thông (Artalia)"],
+    "Description":  ["I am an artist and a developer", "Mình là một họa sĩ và lập trình viên"],
+    "CONTACT":      ["CONTACT ME", "LIÊN LẠC"]
+}

@@ -1,0 +1,85 @@
+.EmailPopUp{
+    background-color: rgb(67, 67, 67);
+    height: 400px;
+    width: 500px;
+    position: fixed;
+    top: 25%;
+    left: 35%;
+    display: grid;
+    border-style: solid;
+    border-color: black;
+    border-width: 5px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas: 
+    "aa aa aa aa"
+    "bb bb cc cc"
+    "dd dd dd dd"
+    "ee ee ee ee"
+    "ee ee ee ee"
+    "ff ff ff ff"
+}
+
+.EmailItem1{
+    grid-area: aa;
+    background-color: rgb(23, 23, 23);
+    color: rgb(58, 207, 180);
+    display: flex;
+    justify-content: center;
+}
+
+.EmailItem2{
+    grid-area: bb;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.EmailItem3{
+    grid-area: cc;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.EmailItem4{
+    grid-area: dd;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.EmailItem5{
+    grid-area: ee;
+}
+
+.EmailItem6{
+    grid-area: ff;
+    display: flex;
+    justify-content: center;
+}
+
+input{
+    flex-grow: 1;
+    background-color: rgb(37, 35, 35);
+    color: white;
+}
+
+button{
+    height: 30px;
+    width: 200px;
+    font-size: 15px;
+    background-color: rgb(37, 35, 35);
+    color: rgb(58, 207, 180);;
+    font-family:Arial;
+    list-style-type: none;
+    margin: 20px 10px;
+    border-style: unset;
+    border-radius: 5px;
+}
+
+button:hover{
+    background-color:black;
+    color: yellow;
+    border-color: rgb(0, 0, 0);
+}
