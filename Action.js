@@ -1,11 +1,15 @@
 let guessEmail;
 let guessName;
 let guessFaName;
-let textFile = "text.txt";
+let textFile = "text.json";
 let language = "English";
 
-function popUp(){
-    window.open("emailPopUp.html");
+function popUp(string){
+    document.getElementById(string).style.visibility = "visible";
+}
+
+function exitPopUp(string){
+    document.getElementById(string).style.visibility = "hidden";
 }
 
 function openGit(){
@@ -21,6 +25,12 @@ function downloadCV(){
             window.open("image/NguyenMinhThong_CV_ENG.pdf"); 
             break;
     }
+}
+
+async function setLanguage(input, index){
+    const response = await fetch("text.json");
+    const data = await response.json();
+    return data.language[input][input];
 }
 
 
