@@ -94,7 +94,7 @@ Button:hover {
 
 .BtnContact{
     font-size: 15px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: Arial;
     background-color: rgb(58, 207, 180);
     color: rgb(0, 0, 0);
     border-style:solid;
@@ -207,7 +207,7 @@ input{
     width: 200px;
     font-size: 15px;
     background-color: rgb(37, 35, 35);
-    color: rgb(58, 207, 180);;
+    color: rgb(58, 207, 180);
     font-family:Arial;
     list-style-type: none;
     margin: 20px 10px;
@@ -221,7 +221,7 @@ input{
     width: 200px;
     font-size: 15px;
     background-color: rgb(37, 35, 35);
-    color: rgb(58, 207, 180);;
+    color: rgb(58, 207, 180);
     font-family:Arial;
     list-style-type: none;
     margin: 20px 10px;
@@ -239,6 +239,32 @@ input{
     background-color:black;
     color: yellow;
     border-color: rgb(0, 0, 0);
+}
+
+.dropDownLang{
+    position: relative;
+    display: inline-block;
+    background-color: rgb(37, 35, 35);;
+}
+
+.dropDownContent{
+    display: none;
+    color: rgb(58, 207, 180);
+    position: absolute;
+    min-width: 150px;
+}
+
+.dropDownContent div{
+    padding: 10px;
+    cursor: pointer;
+}
+
+.dropDownContent div:hover{
+    background-color: rgb(74, 69, 69);
+}
+
+.dropDownLang:hover .dropDownContent {
+    display: block;
 }
 
 

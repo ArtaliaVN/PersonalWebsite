@@ -3,31 +3,38 @@
     <head> 
         <title>ArtaliaPortFo</title>
         <link rel = "stylesheet" href = "Style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
         <header>
             <nav class = "Toolbar"> 
                 <section class = "LeftTool">
-                    <a href = "Index.html"><Button style = "border-bottom: solid; border-color: rgb(58, 207, 180)" id = "Index">Home</Button></a>
-                    <a href = "AboutMe.html"><Button id = "About me">About me</Button></a>
-                    <a href = "Achievement.html"><Button id = "Achievement">Achievement</Button></a>
+                    <a href = "Index.html"><button style = "border-bottom: solid; border-color: rgb(58, 207, 180)" id = "Index"></button></a>
+                    <a href = "AboutMe.html"><button id = "About me"></button></a>
+                    <a href = "Achievement.html"><button id = "Achievement"></button></a>
                 </section>
 
                 <section class = "RightTool">
-                    <Button id = "Language">Language</Button>
-                    <Button id = "Control">Control</Button>
+                    <div id = "dropDownLang" class = "dropDownLang">
+                        <button id = "Language"></button>
+                        <div id = "dropDownContent" class = "dropDownContent">
+                            <div onclick = "changeLanguage(1)" id = "Eng">English</div>
+                            <div onclick = "changeLanguage(2)" id = "Viet">Tiếng Việt</div>
+                        </div>
+                    </div>
+                    <button id = "Control"></button>
                 </section>
             </nav>  
 
             <section class = "MiddlePage">
                 <section class = "LeftPage">
-                    <nav style = "font-size: 120px; font-family: fantasy; color: aliceblue; text-shadow: 30px 30px rgb(11, 11, 11)">GOOD DAY!</nav>
-                    <nav style = "font-size: 50px; font-family: fantasy; color: aliceblue">I'm Nguyen Minh Thong</nav>
-                    <h3 style = "font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: aliceblue">I'm a fresher developer</h3>
+                    <nav style = "font-size: 120px; font-family: fantasy; color: aliceblue; text-shadow: 30px 30px rgb(11, 11, 11)" id = "GOODDAY"></nav>
+                    <nav style = "font-size: 50px; font-family: fantasy; color: aliceblue" id = "name"></nav>
+                    <h3 style = "font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: aliceblue" id = "jobIntro"></h3>
                     <section class = "Contact">
-                        <Button onclick = 'popUp("EmailPopUp")' class = "BtnContact">CONTACT ME</Button>
-                        <Button onclick = "downloadCV()" class = "BtnDownloadCV">My CV</Button>
-                        <Button onclick = "openGit()" class = "BtnGit"><img src = "/Image/GitBlack.png" alt="Git" width = "20px" height="20px"></Button>
+                        <button onclick = "popUp('EmailPopUp')" class = "BtnContact" id = "BtnContact">CONTACT ME</button>
+                        <button onclick = "downloadCV()" class = "BtnDownloadCV" id = "BtnDownloadCV">My CV</button>
+                        <button onclick = "openGit()" class = "BtnGit" id = "BtnGit"><img src = "/Image/GitBlack.png" alt="Git" width = "20px" height="20px"></button>
                     </section>
                 </section>
 
@@ -67,11 +74,10 @@
             </div>
         
             <div class = "EmailItem6 item">
-                <button onclick = 'exitPopUp("EmailPopUp")' class = "Cancel">Cancel</button>
+                <button onclick = "exitPopUp('EmailPopUp')" class = "Cancel">Cancel</button>
                 <button class = "Send">Send</button>
             </div>
-        </div>
-
-        <script src = "Action.js"></script>        
+        </div>       
+        <script src = "Action.js"></script>    
     </body>
 </html>
