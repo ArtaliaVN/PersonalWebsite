@@ -3,7 +3,6 @@ let guessName;
 let guessFaName;
 let contentEmail;
 let textFile = "text.json";
-window.language = "English";
 
 function popUp(string){
     document.getElementById(string).style.visibility = "visible";
@@ -18,7 +17,7 @@ function openGit(){
 }
 
 function downloadCV(){
-    switch(language){
+    switch(localStorage.getItem("lang")){
         case "Vietnamese":
             window.open("image/NguyenMinhThong_CV_VN.pdf"); 
             break;
@@ -31,20 +30,23 @@ function downloadCV(){
 function changeLanguage(index){
     switch(index){
         case 1:
-            language = "English";
+            localStorage.setItem("lang", "English")
             break;
         case 2:
-            language = "Vietnamese";
+            localStorage.setItem("lang", "Vietnamese")
             break;
     }
     setLanguage();
 }
 
 function getLanguage(){
-    switch(language){
+    switch(localStorage.getItem("lang")){
         case "Vietnamese":
             return 1;
         case "English":
+            return 0;
+        default:
+            localStorage.setItem("lang", "English")
             return 0;
     }
 }
@@ -89,9 +91,9 @@ function sendEmail() {
         Subject: "Sending Email using javascript",
         Body: "Well that was easy!!",
     })
-        .then(function (message) {
-            alert("mail sent successfully")
-        });
+    .then(function (message) {
+        alert("mail sent successfully")
+    });
 }
 
 setLanguage();
